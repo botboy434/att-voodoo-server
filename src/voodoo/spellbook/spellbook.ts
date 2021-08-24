@@ -1,4 +1,4 @@
-import { pages, School, Upgrades } from 'att-voodoo-spellbook';
+import { pages, School, Upgrades } from './spell-definitions';
 import * as spells from './spells';
 import { Experience, VoodooServer } from '../createVoodooServer';
 import { xpGain } from './experience';

@@ -18,32 +18,6 @@ export const getSeal =
 
       const accountId = session.rows[0].account_id;
 
-      /* Verify player is near a Spellcrafting Conduit. */
-      const { Result: nearbyPrefabs } = await voodoo.command({
-        accountId,
-        command: `select find ${accountId} ${voodoo.config.CONDUIT_DISTANCE}`
-      });
-
-      if ((nearbyPrefabs ?? []).length === 0) {
-        voodoo.command({ accountId, command: `player message ${accountId} "Not near a Spellcrafting Conduit" 2` });
-
-        return clientResponse.status(406).json({
-          ok: false,
-          error: 'Not near a Spellcrafting Conduit',
-          nearbyPrefabs
-        });
-      }
-
-      const nearConduit = nearbyPrefabs.find(({ Name }: { Name: string }) => /^Green_Crystal_cluster_03.*/i.test(Name));
-
-      if (!nearConduit) {
-        voodoo.command({ accountId, command: `player message ${accountId} "Not near a Spellcrafting Conduit" 2` });
-
-        return clientResponse.status(406).json({
-          ok: false,
-          error: 'Not near a Spellcrafting Conduit'
-        });
-      }
 
       /* Get the player's current incantations. */
       const incantations = voodoo.players[accountId].incantations.map(

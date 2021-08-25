@@ -15,14 +15,13 @@
     "@sentry/node": "^6.4.1",
     "@sentry/tracing": "^6.4.1",
     "att-string-transcoder": "^1.1.0",
-    "att-voodoo-spellbook": "github:mdingena/att-voodoo-spellbook",
     "bitwise": "^2.1.0",
     "express": "^4.17.1",
     "ieee754": "^1.2.1",
     "js-tale": "^1.5.5",
-    "nocache": "^3.0.0",
+    "nocache": "^3.0.1",
     "node-fetch": "^2.6.1",
-    "pg": "^8.6.0",
+    "pg": "^8.7.1",
     "three": "^0.128.0"
   },
   "devDependencies": {
@@ -32,11 +31,11 @@
     "@types/three": "^0.128.0",
     "dotenv": "^9.0.2",
     "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.5"
   },
   "husky": {
     "hooks": {

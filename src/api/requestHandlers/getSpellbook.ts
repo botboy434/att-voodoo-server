@@ -1,4 +1,4 @@
-import { pages } from 'att-voodoo-spellbook';
+import { pages } from '../../voodoo/spellbook/spell-definitions';
 import * as spellFunctions from '../../voodoo/spellbook/spells';
 import { RequestHandler } from 'express';
 

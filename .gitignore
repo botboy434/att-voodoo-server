@@ -1,4 +1,5 @@
 # Secret environment variables
+*.env
 .env
 .env.production
 .env.staging

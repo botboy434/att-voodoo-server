@@ -2,12 +2,15 @@
   "name": "att-voodoo-server",
   "version": "1.0.0-beta.11",
   "description": "",
-  "main": "build/index.js",
+  "main": "build/index.ts",
   "scripts": {
     "prebuild": "rimraf build/",
     "build": "tsc",
     "dev": "ts-node -r dotenv/config ./src/index.ts",
-    "start": "node ./build/index.js"
+    "start": "node ./build/index.ts",
+    "watch-node": "nodemon dist/index.ts",
+    "watch-ts": "tsc -w",
+    "postinstall": "tsc"
   },
   "author": "Marc Dingena",
   "license": "MIT",
@@ -48,6 +51,7 @@
     "**/*.{js,ts,jsx,tsx,json,css,html}": "prettier --write"
   },
   "engines": {
-    "npm": "6.x"
+    "npm": "6.x",
+    "node": "v14.17.5"
   }
 }

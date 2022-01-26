@@ -2,13 +2,13 @@
   "name": "att-voodoo-server",
   "version": "1.0.0-beta.11",
   "description": "",
-  "main": "build/index.ts",
+  "main": "build/index.js",
   "scripts": {
     "prebuild": "rimraf build/",
     "build": "tsc",
-    "dev": "ts-node -r dotenv/config ./src/index.ts",
-    "start": "node ./build/index.ts",
-    "watch-node": "nodemon dist/index.ts",
+    "dev": "ts-node -r dotenv/config ./src/index.js",
+    "start": "node ./build/index.js",
+    "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
     "postinstall": "tsc"
   },
